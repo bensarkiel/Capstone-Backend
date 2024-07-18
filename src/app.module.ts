@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AdminModule } from './admin/admin.module';
+import { CustomerModule } from './customer/customer.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
@@ -14,7 +15,7 @@ import { CollectModule } from './collect/collect.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://shopify:secret@mongodb:27017/admin'),
+    MongooseModule.forRoot('mongodb://shopify:secret@localhost:27017/admin'),
     // MongooseModule.forRoot('mongodb://shopify:secret@mongodb:27017/shopify-db'),
     // MongooseModule.forRoot('mongodb://localhost:27017/shopify-rest-api'),
     MulterModule.register({
@@ -35,6 +36,7 @@ import { CollectModule } from './collect/collect.module';
     }),
     AdminModule,
     AuthModule,
+    CustomerModule,
     ProductVariantModule,
     ProductImageModule,
     ProductModule,
