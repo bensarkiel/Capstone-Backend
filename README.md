@@ -3,4 +3,4 @@ cara run aplikasi
 2. jalankan perintah : docker-compose build
 3. jalankan perintah : docker-compose up -d
 4. untuk monitoring dapat menjalankan perintah: npm run start
-   tapi haru mematikan container app terlebih dahulu karena mengggunakan port yang sama, biarkan database tetap menyala 
+5. saat monitoring harus mematikan container app terlebih dahulu karena mengggunakan port yang sama, biarkan database tetap menyala 
